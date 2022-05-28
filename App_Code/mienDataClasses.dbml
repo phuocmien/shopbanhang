@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLSV" Class="mienDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=QLSV;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLSVConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblDangKy" Member="tblDangKies">
+    <Type Name="tblDangKy">
+      <Column Name="MaHV" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayKG" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayKT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="tblHocVien_tblDangKy" Member="tblHocVien" ThisKey="MaHV" OtherKey="MaHV" Type="tblHocVien" IsForeignKey="true" />
+      <Association Name="tblMonHoc_tblDangKy" Member="tblMonHoc" ThisKey="MaMH" OtherKey="MaMH" Type="tblMonHoc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPhanCong" Member="tblPhanCongs">
+    <Type Name="tblPhanCong">
+      <Column Name="MaGV" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tblGiaoVien_tblPhanCong" Member="tblGiaoVien" ThisKey="MaGV" OtherKey="MaGV" Type="tblGiaoVien" IsForeignKey="true" />
+      <Association Name="tblMonHoc_tblPhanCong" Member="tblMonHoc" ThisKey="MaMH" OtherKey="MaMH" Type="tblMonHoc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblGiaoVien" Member="tblGiaoViens">
+    <Type Name="tblGiaoVien">
+      <Column Name="MaGV" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoGV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="tblGiaoVien_tblPhanCong" Member="tblPhanCongs" ThisKey="MaGV" OtherKey="MaGV" Type="tblPhanCong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblHocVien" Member="tblHocViens">
+    <Type Name="tblHocVien">
+      <Column Name="MaHV" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoHV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenHV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="tblHocVien_tblDangKy" Member="tblDangKies" ThisKey="MaHV" OtherKey="MaHV" Type="tblDangKy" />
+      <Association Name="tblHocVien_tblKetQua" Member="tblKetQuas" ThisKey="MaHV" OtherKey="MaHV" Type="tblKetQua" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblKetQua" Member="tblKetQuas">
+    <Type Name="tblKetQua">
+      <Column Name="MaHV" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Diem" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="tblHocVien_tblKetQua" Member="tblHocVien" ThisKey="MaHV" OtherKey="MaHV" Type="tblHocVien" IsForeignKey="true" />
+      <Association Name="tblMonHoc_tblKetQua" Member="tblMonHoc" ThisKey="MaMH" OtherKey="MaMH" Type="tblMonHoc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMonHoc" Member="tblMonHocs">
+    <Type Name="tblMonHoc">
+      <Column Name="MaMH" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SoTiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HocPhi" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="tblMonHoc_tblDangKy" Member="tblDangKies" ThisKey="MaMH" OtherKey="MaMH" Type="tblDangKy" />
+      <Association Name="tblMonHoc_tblPhanCong" Member="tblPhanCongs" ThisKey="MaMH" OtherKey="MaMH" Type="tblPhanCong" />
+      <Association Name="tblMonHoc_tblKetQua" Member="tblKetQuas" ThisKey="MaMH" OtherKey="MaMH" Type="tblKetQua" />
+    </Type>
+  </Table>
+</Database>

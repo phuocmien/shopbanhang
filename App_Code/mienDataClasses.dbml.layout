@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.5" name="mienDataClasses">
+  <DataContextMoniker Name="/mienDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e1532b7e-1c83-41cd-bc84-6620f543c6b3" absoluteBounds="3.5, 6.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/mienDataClassesDataContext/tblDangKy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96d8c16e-2be5-4847-9d2b-78d5df546df2" absoluteBounds="3.515, 7.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00ed7363-53bf-448e-93ae-1ec78cea27c1" absoluteBounds="3.5, 4, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/mienDataClassesDataContext/tblPhanCong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="885cd238-6448-4454-9ccb-a9cb9a997f91" absoluteBounds="3.515, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e729ce49-6a62-4afa-97a1-3bf03b49f60f" absoluteBounds="0.75, 0.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/mienDataClassesDataContext/tblGiaoVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9172ab94-e945-4078-82b4-2c9d41989969" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d139265b-c5a1-4439-9283-6c64458812e1" absoluteBounds="0.75, 6.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/mienDataClassesDataContext/tblHocVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9eb132e8-747c-496a-beb4-cc480c9d113e" absoluteBounds="0.765, 7.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="970a8da3-ee11-421d-98d3-acf74464b339" absoluteBounds="3.5, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/mienDataClassesDataContext/tblKetQua" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79f8e56c-7d30-4ab0-a4ff-9e7441106126" absoluteBounds="3.515, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bddb9b2e-3ff5-436c-a8c3-18b852403027" absoluteBounds="0.75, 4, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/mienDataClassesDataContext/tblMonHoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8de52e18-06d2-40d9-8cd0-71bc1db341dd" absoluteBounds="0.765, 4.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.7131982421875); (3.125 : 3.0881982421875); (3.125 : 4.69314697265625); (3.22916666666667 : 4.69314697265625 : JumpStart); (3.39583333333333 : 4.69314697265625 : JumpEnd); (3.5 : 4.69314697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/mienDataClassesDataContext/tblGiaoVien/tblGiaoVien_tblPhanCong" />
+      <nodes>
+        <classShapeMoniker Id="e729ce49-6a62-4afa-97a1-3bf03b49f60f" />
+        <classShapeMoniker Id="00ed7363-53bf-448e-93ae-1ec78cea27c1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.76044840494792); (3.5 : 7.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/mienDataClassesDataContext/tblHocVien/tblHocVien_tblDangKy" />
+      <nodes>
+        <classShapeMoniker Id="d139265b-c5a1-4439-9283-6c64458812e1" />
+        <classShapeMoniker Id="e1532b7e-1c83-41cd-bc84-6620f543c6b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.93807592307692); (3.06607443490112 : 6.6220014881758 : JumpStart); (3.18392556509888 : 6.50415035797804 : JumpEnd); (3.3125 : 6.37557592307692); (3.3125 : 1.69314697265625); (3.5 : 1.69314697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/mienDataClassesDataContext/tblHocVien/tblHocVien_tblKetQua" />
+      <nodes>
+        <classShapeMoniker Id="d139265b-c5a1-4439-9283-6c64458812e1" />
+        <classShapeMoniker Id="970a8da3-ee11-421d-98d3-acf74464b339" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.57859537760417); (3.125 : 5.95359537760417); (3.125 : 7.28647220247396); (3.5 : 7.28647220247396)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/mienDataClassesDataContext/tblMonHoc/tblMonHoc_tblDangKy" />
+      <nodes>
+        <classShapeMoniker Id="bddb9b2e-3ff5-436c-a8c3-18b852403027" />
+        <classShapeMoniker Id="e1532b7e-1c83-41cd-bc84-6620f543c6b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.28407348632813); (3.04166666666667 : 4.28407348632812 : JumpStart); (3.20833333333333 : 4.28407348632813 : JumpEnd); (3.22916666666667 : 4.28407348632812 : JumpStart); (3.39583333333333 : 4.28407348632813 : JumpEnd); (3.5 : 4.28407348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/mienDataClassesDataContext/tblMonHoc/tblMonHoc_tblPhanCong" />
+      <nodes>
+        <classShapeMoniker Id="bddb9b2e-3ff5-436c-a8c3-18b852403027" />
+        <classShapeMoniker Id="00ed7363-53bf-448e-93ae-1ec78cea27c1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.06314281510417); (3.06607443490112 : 3.74706838020305 : JumpStart); (3.18392556509888 : 3.62921725000529 : JumpEnd); (3.1875 : 3.62564281510417); (3.1875 : 2.07097245898437); (3.22916666666667 : 2.07097245898437 : JumpStart); (3.39583333333333 : 2.07097245898437 : JumpEnd); (3.5 : 2.07097245898437)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/mienDataClassesDataContext/tblMonHoc/tblMonHoc_tblKetQua" />
+      <nodes>
+        <classShapeMoniker Id="bddb9b2e-3ff5-436c-a8c3-18b852403027" />
+        <classShapeMoniker Id="970a8da3-ee11-421d-98d3-acf74464b339" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
